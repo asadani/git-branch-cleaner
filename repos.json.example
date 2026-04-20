@@ -1,0 +1,6 @@
+{
+  "repos": [
+    "myorg/my-service",
+    "https://github.com/myorg/other-repo"
+  ]
+}

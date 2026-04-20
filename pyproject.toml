@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-branch-cleaner"
+version = "0.1.0"
+description = "Interactive CLI to review and delete stale GitHub branches across repositories."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyGithub>=2.9.0",
+    "questionary>=2.1.0",
+    "rich>=13.0.0",
+    "click>=8.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0",
+    "flake8>=7.0",
+    "pre-commit>=3.0",
+]
+
+[project.scripts]
+git-branch-cleaner = "git_branch_cleaner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]

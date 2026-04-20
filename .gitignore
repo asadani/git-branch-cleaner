@@ -1,0 +1,34 @@
+# Secrets and local lists
+.env
+.env.*
+!.env.example
+repos.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+dist/
+build/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+
+# Local Claude / editor
+.claude/
