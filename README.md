@@ -42,7 +42,7 @@ pre-commit install
 
 Copy [`.env.example`](.env.example) to `.env` and set `GITHUB_TOKEN`, or export it in your shell.
 
-The app loads **`GITHUB_TOKEN` from a `.env` file next to the installed package** (`src/git_branch_cleaner/` when developing from a clone), then from **`.env` in your current working directory** (which overrides on duplicate keys). You can also pass `--token`. Values are trimmed; avoid wrapping the token in quotes unless the whole value is consistently quoted.
+The app loads **`GITHUB_TOKEN` from a `.env` file next to the installed package** (`git_branch_cleaner/` when developing from a clone), then from **`.env` in your current working directory** (which overrides on duplicate keys). You can also pass `--token`. Values are trimmed; avoid wrapping the token in quotes unless the whole value is consistently quoted.
 
 Do not commit `.env`; it is listed in `.gitignore`.
 
@@ -98,9 +98,9 @@ Run `git-branch-cleaner --help` for all options.
 | [`pyproject.toml`](pyproject.toml) | Project metadata, dependencies, Black settings |
 | [`.flake8`](.flake8) | Flake8 (88 columns, Black-compatible ignores) |
 | [`.pre-commit-config.yaml`](.pre-commit-config.yaml) | Optional pre-commit: Black + Flake8 |
-| `src/git_branch_cleaner/cli.py` | CLI entrypoint and orchestration |
-| `src/git_branch_cleaner/client.py` | GitHub API: list branches, open PRs, merge status, delete refs |
-| `src/git_branch_cleaner/ui.py` | TUI: questionary checkbox, rich tables, confirmation prompt |
+| `git_branch_cleaner/cli.py` | CLI entrypoint and orchestration |
+| `git_branch_cleaner/client.py` | GitHub API: list branches, open PRs, merge status, delete refs |
+| `git_branch_cleaner/ui.py` | TUI: questionary checkbox, rich tables, confirmation prompt |
 
 ## Safety behavior
 

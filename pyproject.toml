@@ -26,8 +26,8 @@ dev = [
 [project.scripts]
 git-branch-cleaner = "git_branch_cleaner.cli:main"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+packages = ["git_branch_cleaner"]
 
 [tool.black]
 line-length = 88
